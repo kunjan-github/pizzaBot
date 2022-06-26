@@ -1,0 +1,257 @@
+{
+  "id": "d744d049-0b94-4825-bc8d-0e91efade6bc",
+  "name": "orderPizza",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "phone-number",
+          "dataType": "@sys.phone-number",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Sure. May I know your phone-number?",
+            "May I know your contact number?"
+          ],
+          "value": "$phone-number",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "email",
+          "dataType": "@sys.email",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Enter your mail ID"
+          ],
+          "value": "$email",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "time-period",
+          "dataType": "@sys.time-period",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "when you need pizza?"
+          ],
+          "value": "$time-period",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "address",
+          "dataType": "@sys.address",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Where the pizza need to be delivered?"
+          ],
+          "value": "$address",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "toppings",
+          "dataType": "@toppings",
+          "isList": true,
+          "required": true,
+          "prompts": [
+            "What toppings do you need? Cheese, Spicy, Panner, Red paprika, Olives"
+          ],
+          "value": "$toppings",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "size",
+          "dataType": "@size",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Which size do you need? small, medium and large"
+          ],
+          "value": "$size",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Pizza order successful in the number of $phone-number, $email with the toppings $toppings on $time-period.original in size of $size"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order me a pizza in the ",
+          "userDefined": false
+        },
+        {
+          "text": "size",
+          "userDefined": true,
+          "alias": "size",
+          "meta": "@size"
+        }
+      ],
+      "count": 0,
+      "id": "21b910f1-05fd-4c58-9de0-f497da912abe",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order me a pizza with ",
+          "userDefined": false
+        },
+        {
+          "text": "toppings",
+          "userDefined": true,
+          "alias": "toppings",
+          "meta": "@toppings"
+        }
+      ],
+      "count": 0,
+      "id": "529df01b-4161-4641-8e5f-7d3071ee32b2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order me pizza ",
+          "userDefined": false
+        },
+        {
+          "text": "here",
+          "userDefined": true,
+          "alias": "address",
+          "meta": "@sys.address"
+        }
+      ],
+      "count": 0,
+      "id": "94000eaa-eabb-47cb-8e5b-eeda1da26be5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order me pizza ",
+          "userDefined": false
+        },
+        {
+          "text": "on",
+          "userDefined": true,
+          "alias": "time-period",
+          "meta": "@sys.time-period"
+        }
+      ],
+      "count": 0,
+      "id": "ee346415-92fd-4ac8-99c5-c2360a0b7375",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order me a pizza on the email ID of kunjan@",
+          "userDefined": false
+        },
+        {
+          "text": "gmail",
+          "userDefined": true,
+          "alias": "email",
+          "meta": "@sys.email"
+        },
+        {
+          "text": ".com",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9de81bb0-9f6d-4fed-b45d-4d62b5727834",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order me a pizza for the ",
+          "userDefined": false
+        },
+        {
+          "text": "8200475997",
+          "userDefined": true,
+          "alias": "phone-number",
+          "meta": "@sys.phone-number"
+        }
+      ],
+      "count": 0,
+      "id": "7f646db0-4c27-4a52-8fa3-c5cb3fce1a30",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order me a pizza",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "54fe7935-3b3f-4d5c-9fac-7cd66b2dd5be",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
